@@ -20,14 +20,13 @@ interface TileProps {
 }
 
 const Tile = ({uri}: TileProps) => {
-  console.log("size: " + size);
   return (
-    <View style = {styles.container}>
-      <WebView
-        source = {{uri}}
-        style = {styles.WVStyle}
-      />
-    </View>
+      <View style = {styles.container}>
+        <WebView
+          source = {{uri}}
+          style = {styles.WVStyle}
+        />
+      </View>
   )
 }
 
@@ -35,6 +34,7 @@ const styles = StyleSheet.create({
   container: {
     width: size,
     height: size,
+    backgroundColor: 'black',
   },
   WVStyle: {
     flex: 1,
