@@ -7,7 +7,7 @@ import { Dimensions } from "react-native";
 
 const windowWidth = Dimensions.get("window").width;
 
-const size = windowWidth / 2 - 8
+const size = windowWidth / 2 - 8;
 
 
 
@@ -19,7 +19,7 @@ interface TileProps {
   onLongPress: () => void;
 }
 
-const Tile = ({uri}: TileProps) => {
+const Tile = ({uri, id}: TileProps) => {
   return (
       <View style = {styles.container}>
         <WebView

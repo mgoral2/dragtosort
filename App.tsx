@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Tile from './Tile.tsx';
+import ScrollingView from './ScrollingView';
 
 const tiles = [
   {
@@ -44,7 +45,7 @@ const tiles = [
 
 const App = () => {
   return (
-    <Tile uri = {tiles[0].uri}/>
+    <ScrollingView children = {tiles}/>
   )
 }
 
