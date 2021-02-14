@@ -39,6 +39,14 @@ const tiles = [
     id: "twitter",
     uri: "https://twitter.com",
   },
+  {
+    id: "youtube",
+    uri: "https://youtube.com",
+  },
+  {
+    id: "twitter",
+    uri: "https://twitter.com",
+  },
 ];
 
 

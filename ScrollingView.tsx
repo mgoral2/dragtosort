@@ -1,7 +1,7 @@
 //ScrollingView.tsx
 
 import React, { ReactElement } from "react";
-import { Dimensions } from "react-native";
+import { Dimensions, StyleSheet, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
 const windowWidth = Dimensions.get("window").width;
@@ -24,17 +24,25 @@ const ScrollingView = ({children}: ListProps) => {
       bounces = {false}
       scrollEventThrottle={16}
     >
-
-    {children.map((child) => {
-      return (
-        <Tile
-          uri = {child.uri}
-          id = {child.id}
-        />
-        );
-})}
-</ScrollView>
+      <View style = {styles.ViewStyle}>
+      {children.map((child) => {
+        return (
+          <Tile
+            uri = {child.uri}
+            id = {child.id}
+          />
+          );
+  })}
+      </View>
+    </ScrollView>
 );
 };
+
+const styles = StyleSheet.create({
+  ViewStyle: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+})
 
 export default ScrollingView;
